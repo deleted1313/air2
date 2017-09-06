@@ -17,7 +17,9 @@ class MessagesController extends Controller
 	        'g-recaptcha-response' => 'required|captcha'
         ]);
         if ($validate->fails()) { 
-        return back();
+        session()->flash('message', 'Ошибка! Может, попробуете еще раз?');
+                   return redirect('/#footer');
+
         }
         
       Footerform::create([
@@ -39,8 +41,9 @@ class MessagesController extends Controller
         $message1->from($data['email'], $data['name'], $data['message3']);
         $message1->to($mail_admin, 'For Admin')->subject('Message from site');
      });
-      session()->flash('mes', 'Ваша заявка отправлена!');
-      return back();
+     session()->flash('message', 'Ваша заявка отправлена!');
+           return redirect('/#footer');
+
     }
     public function eventsoloform(Request $request)
       {

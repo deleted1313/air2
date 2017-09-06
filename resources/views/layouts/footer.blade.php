@@ -1,4 +1,5 @@
-<footer class="page-footer">
+<footer class="page-footer" id="footer">
+   
   <div class="container">
     <div class="row">
       
@@ -40,7 +41,6 @@
         </div>
 
       </div>
-        
       </form>
       <hr style="width: 97%;border: 1px solid white;">
       <div class="col l12">

@@ -1,15 +1,17 @@
 
 
   $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+function explode(){
+  $('.toast').css('display','none');
+}
+setTimeout(explode, 3000);    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
      $('.materialboxed').materialbox();
   });
   $(".button-collapse").sideNav();
             $(".dropdown-button").dropdown();
             
-            
-            
+
             
             
             
