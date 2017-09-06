@@ -322,6 +322,8 @@
                    </div>
 <form action="/jurnal" method="POST" enctype="multipart/form-data">
                      {{ csrf_field() }}
+                  
+                     
                  <div class="col l12 m12 s12">
                       <div class="col l6 m12 s12 muntis">
                       <input placeholder="Фамилия Имя Отчество" name="fio1" id="first_name" type="text" class="validate foot_form_pub" required>

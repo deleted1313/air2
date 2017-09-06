@@ -51,7 +51,7 @@ Route::get('/docs', 'MainController@docs');
 
 Route::get('/contacts', 'MainController@contacts');
 
-Route::get('/global', 'MainController@global');
+Route::get('/global', 'MainController@glob');
 
 Route::get('/uchdocs', 'MainController@uchdocs');
 

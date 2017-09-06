@@ -6,23 +6,32 @@ use Illuminate\Http\Request;
 use App\Footerform;
 use App\Eventsoloform;
 use Illuminate\Support\Facades\Storage;
+use Validator;
 
 class MessagesController extends Controller
 
 {
     public function footerform(Request $request)
       {
+        $validate = Validator::make($request->all(), [
+	        'g-recaptcha-response' => 'required|captcha'
+        ]);
+        if ($validate->fails()) { 
+        return back();
+        }
+        
       Footerform::create([
       'name' => request('name'),
       'email' => request('email'),
       'email1' => request('email1'),
       ]);
       
-         $data= array(
+        $data= array(
       'name' => request('name'),
       'email' => request('email'),
       'email1' => request('email1'),
       'message3' => request('message3'),
+
       );
        \Mail::send('email.mail2', $data, function($message1) use ($data)
     {
@@ -81,6 +90,8 @@ class MessagesController extends Controller
     
     public function jurnal(Request $request)
       {
+      
+          
         $data = array(
             'fio1'   => $request->get('fio1'),
             'nauch1' => $request->get('nauch1'),

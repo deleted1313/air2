@@ -162,14 +162,14 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
-
+        
 
         /*
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
+        Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -232,6 +232,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Captcha' => Buzz\LaravelGoogleCaptcha\CaptchaFacade::class,
 
 
     ],

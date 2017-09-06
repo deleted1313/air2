@@ -30,7 +30,9 @@
     
         
  <div class="col s12 l4 m4" style="padding-left: 0px;">
-
+  
+                         {!! app('captcha')->display() !!}
+                     
         </div>
         
         <div class="input-field col s12 l4 m4 right" style="padding-left: 0px;">

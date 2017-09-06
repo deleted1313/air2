@@ -307,7 +307,7 @@ class MainController extends Controller
       return view('pages.contacts', compact('titl', 'meta', 'keywords'));
     }
 
-    public function global()
+    public function glob()
     {
       
        $seos = Seo::latest()
